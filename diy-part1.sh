@@ -1,4 +1,22 @@
 #!/bin/bash
+
+echo 'src-git OpenClash https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
+echo 'src-git luci-app-jd-dailybonus https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
+echo 'src-git helloworld https://github.com/tty228/luci-app-serverchan.git' >>feeds.conf.default
+echo 'src-git helloworld https://github.com/rufengsuixing/luci-app-adguardhome.git' >>feeds.conf.default
+echo 'src-git helloworld https://github.com/jerrykuku/lua-maxminddb.git' >>feeds.conf.default
+echo 'src-git https://github.com/jerrykuku/luci-app-vssr.git' >>feeds.conf.default
+
+# git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+# git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+# git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
+
+rm -rf package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+
 #
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
@@ -13,16 +31,5 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# Add feed sources
-# sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-# sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 
-git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
-git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
-git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
-
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
