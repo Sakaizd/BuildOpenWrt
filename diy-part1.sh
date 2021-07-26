@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'src-git OpenClash https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
-echo 'src-git luci-app-jd-dailybonus https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
+echo 'src-git luci-app-jd-dailybonus https://github.com/jerrykuku/luci-app-jd-dailybonus.git' >>feeds.conf.default
 echo 'src-git luci-app-serverchan https://github.com/tty228/luci-app-serverchan.git' >>feeds.conf.default
 echo 'src-git luci-app-adguardhome https://github.com/rufengsuixing/luci-app-adguardhome.git' >>feeds.conf.default
 echo 'src-git lua-maxminddb https://github.com/jerrykuku/lua-maxminddb.git' >>feeds.conf.default
