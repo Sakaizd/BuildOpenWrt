@@ -2,10 +2,10 @@
 
 echo 'src-git OpenClash https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
 echo 'src-git luci-app-jd-dailybonus https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
-echo 'src-git helloworld https://github.com/tty228/luci-app-serverchan.git' >>feeds.conf.default
-echo 'src-git helloworld https://github.com/rufengsuixing/luci-app-adguardhome.git' >>feeds.conf.default
-echo 'src-git helloworld https://github.com/jerrykuku/lua-maxminddb.git' >>feeds.conf.default
-echo 'src-git https://github.com/jerrykuku/luci-app-vssr.git' >>feeds.conf.default
+echo 'src-git luci-app-serverchan https://github.com/tty228/luci-app-serverchan.git' >>feeds.conf.default
+echo 'src-git luci-app-adguardhome https://github.com/rufengsuixing/luci-app-adguardhome.git' >>feeds.conf.default
+echo 'src-git lua-maxminddb https://github.com/jerrykuku/lua-maxminddb.git' >>feeds.conf.default
+echo 'src-git luci-app-vssr https://github.com/jerrykuku/luci-app-vssr.git' >>feeds.conf.default
 
 # git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
