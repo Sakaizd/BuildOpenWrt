@@ -32,7 +32,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr
 git clone https://github.com/rufengsuixing/luci-app-adguardhome
 
 # Add jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git 
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 
 # Add mentohust & luci-app-mentohust
 git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
