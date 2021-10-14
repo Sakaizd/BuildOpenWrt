@@ -1,32 +1,70 @@
 #!/bin/bash
 
-git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
+# git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
+
+# Add luci-app-ssr-plus
+pushd package/lean
+git clone --depth=1 https://github.com/fw876/helloworld
+popd
+
+# pushd package
+# git clone https://github.com/kenzok8/small
+# popd
+
+# Clone community packages to package/community
+mkdir package/community
+pushd package/community
+
+# Add luci-app-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+sed -i 's/ upx\/host//g' openwrt-passwall/v2ray-plugin/Makefile
+grep -lr upx/host openwrt-passwall/* | xargs -t -I {} sed -i '/upx\/host/d' {}
+
+# Add Hello World
+git clone https://github.com/jerrykuku/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr
+
+# Add adguardhome
+git clone https://github.com/rufengsuixing/luci-app-adguardhome
+
+# Add jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
-git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git  package/luci-app-vssr
-git clone https://github.com/kenzok8/small.git package/small
-# luci-theme-argon
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
 # Add mentohust & luci-app-mentohust
 git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
 git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part1.sh
-# Description: OpenWrt DIY script part 1 (Before Update feeds)
-#
+# Add luci-proto-minieap
+git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# Add ServerChan
+git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
+# Add OpenClash
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
+# Add luci-app-dockerman
+rm -rf ../lean/luci-app-docker
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
+# Add luci-app-unblockneteasemusic
+git clone --depth=1 https://github.com/immortalwrt/luci-app-unblockneteasemusic
+rm -rf ../lean/luci-app-unblockmusic
+
+# Add luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+rm -rf ../lean/luci-theme-argon
+# rm -rf package/lean/luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+
+# Add mentohust & luci-app-mentohust
+git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
+git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
+
+popd
