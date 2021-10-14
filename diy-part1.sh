@@ -32,7 +32,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr
 git clone https://github.com/rufengsuixing/luci-app-adguardhome
 
 # Add jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git 
 
 # Add mentohust & luci-app-mentohust
 git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
@@ -60,6 +60,7 @@ rm -rf ../lean/luci-app-unblockmusic
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
+
 # rm -rf package/lean/luci-theme-argon
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
