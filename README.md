@@ -38,7 +38,7 @@ Build OpenWrt using GitHub Actions
 - [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
 - [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
 - [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
-
+- [SuLingGG/OpenWrt-Rpi](https://github.com/SuLingGG/OpenWrt-Rpi)   
 ## License
 
 [MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © P3TERX
