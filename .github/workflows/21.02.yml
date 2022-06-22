@@ -24,6 +24,7 @@ env:
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 2102.config
+  CLASH_BINARY_PLATFORM: amd64
   INIT_SH: /scripts/immortalFeeds.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -83,7 +84,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         cd openwrt
         $GITHUB_WORKSPACE/scripts/ModifyDefaultIP.sh
-        $GITHUB_WORKSPACE/scripts/preset-clash-core.sh amd64
+        $GITHUB_WORKSPACE/scripts/preset-clash-core.sh $CLASH_BINARY_PLATFORM
 
     - name: Download package
       id: package
