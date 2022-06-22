@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build immortalwrt
+name: Build openwrt-21.02
 
 on:
   repository_dispatch:
@@ -21,9 +21,9 @@ on:
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config
+  CONFIG_FILE: 2102.config
   INIT_SH: /scripts/immortalFeeds.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -87,9 +87,6 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
-# make -j$(nproc) || make -j1 || make -j1 V=s  
-# make -j$(($(nproc) + 1)) V=s   
 
     - name: Compile the firmware
       id: compile
