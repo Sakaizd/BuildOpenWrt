@@ -8,22 +8,16 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build openwrt-21.02
+name: Build x64
 
 on:
-  repository_dispatch:
   workflow_dispatch:
-#     inputs:
-#       ssh:
-#         description: 'SSH connection to Actions'
-#         required: false
-#         default: 'false'
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 2102.config
+  CONFIG_FILE: configs/x64.config
   CLASH_BINARY_PLATFORM: amd64
   INIT_SH: /scripts/immortalFeeds.sh
   UPLOAD_BIN_DIR: false
@@ -59,11 +53,11 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
-    - name: Cache
-      uses: klever1988/cachewrtbuild@main
-      with:
-        ccache: 'true'
-        prefix: ${{ github.workspace }}/openwrt
+    # - name: Cache
+    #   uses: klever1988/cachewrtbuild@main
+    #   with:
+    #     ccache: 'true'
+    #     prefix: ${{ github.workspace }}/openwrt
 
     - name: Load custom feeds
       run: |
@@ -81,8 +75,9 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
-        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        [ -e $CONFIG_FILE ] && mv $GITHUB_WORKSPACE/$CONFIG_FILE openwrt/.config
         cd openwrt
+        tail .config
         $GITHUB_WORKSPACE/scripts/ModifyDefaultIP.sh
         $GITHUB_WORKSPACE/scripts/preset-clash-core.sh $CLASH_BINARY_PLATFORM
 
