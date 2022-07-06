@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 2102.config
+  CONFIG_FILE: /configs/2102.config
   CLASH_BINARY_PLATFORM: amd64
   INIT_SH: /scripts/immortalFeeds.sh
   UPLOAD_BIN_DIR: false
