@@ -31,4 +31,4 @@ Download from [Release](https://github.com/Sakaizd/Actions-LEDE/releases).
 - [immortalwrt/immortalwrt](https://github.com/immortalwrt/immortalwrt)
 ## License
 
-[MIT](https://github.com/Sakaizd/Actions-LEDE/blob/main/LICENSE) © Sakaizd
+[MIT](https://github.com/Sakaizd/Actions-LEDE/blob/main/LICENSE) © Sakaizd Sere1nz
