@@ -5,7 +5,8 @@ Build OpenWrt using GitHub Actions.
 [Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 ## Status
-[![Build friendlyarm_nanopi-r2s](https://github.com/Sakaizd/BuildOpenWrt/actions/workflows/friendlyarm_nanopi-r2s.yml/badge.svg)](https://github.com/Sakaizd/BuildOpenWrt/actions/workflows/friendlyarm_nanopi-r2s.yml)
+[![Build R2S](https://github.com/Sakaizd/BuildOpenWrt/actions/workflows/R2S.yml/badge.svg)](https://github.com/Sakaizd/BuildOpenWrt/actions/workflows/R2S.yml)
+
 [![Build x86_64](https://github.com/Sakaizd/BuildOpenWrt/actions/workflows/x86_64.yml/badge.svg)](https://github.com/Sakaizd/BuildOpenWrt/actions/workflows/x86_64.yml)
 
 ## Usage
