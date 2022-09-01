@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build friendlyarm_nanopi-r2s
+name: Build R2S
 
 on:
   workflow_dispatch:
