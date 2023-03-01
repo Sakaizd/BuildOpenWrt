@@ -11,7 +11,7 @@ jobs:
         
       - name: Build
         run: |
-          echo'Release created at  ${{ env.BUILDTIME }}
+          echo 'Release created at  ${{ env.BUILDTIME }}
           Synchronize ${{ github.ref_name }} branch code updates, keeping only the latest version
           <br>  
           ### release version  
